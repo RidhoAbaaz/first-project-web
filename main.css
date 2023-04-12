@@ -60,6 +60,7 @@ div input {
 }
 .section_1 {
     display: flex;
+    font-family: 'Roboto', sans-serif;
     padding: 10px;
     justify-content: space-between;
     background-color: #404258;
@@ -73,6 +74,7 @@ div input {
 
 .footer {
     background-color: black;
+    font-family: 'Roboto', sans-serif;
     color: white;
     height: 200px;
     text-transform: capitalize;
@@ -110,6 +112,7 @@ footer li a {
 }
 .section_2 {
     display: flex;
+    font-family: 'Roboto', sans-serif;
     padding: 20px;
     justify-content: space-between;
     background-color: #282A3A;
@@ -173,6 +176,25 @@ footer li a {
 }
 #radio5:checked ~ .auto .auto-btn5{
     background: #404258;
+}
+
+.play{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-20%);
+    transition : all 1s;
+}
+
+.stop {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion){
+    .play {
+        transition: none;
+    }
 }
 
 @media (min-width: 768px){
