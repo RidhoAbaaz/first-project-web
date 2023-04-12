@@ -26,13 +26,16 @@ var counter = 1;
             counter = 1;
         }, 6000);
 
-const slideAnimation = new IntersectionObserver {(entries) => {
-      entries.forEach (entry) => {
-      console.log (entry)
+const slideAnimation = new IntersectionObserver((entries) => {
+    entries.forEach ((entry) => {
+      console.log(entry)
       if (entry.isIntersecting){
-        entry.target.classList.add ('play');
+        entry.target.classList.add ('stop');
       } else {
         entry.target.classList.remove ('stop');
       }
-    }
-  }};
+    });
+});
+
+const hiddenAnimation= document.querySelectorAll ('.play');
+hiddenAnimation.forEach((el) => slideAnimation.observe(el));
